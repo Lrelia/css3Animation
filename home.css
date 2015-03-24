@@ -1,0 +1,201 @@
+/* = resetCSS */
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    position: relative;
+    font-family: Microsoft Yahei, Verdana, Helvetica, SimSun, Arial, MingLiu, PMingLiu, "MS Gothic", sans-serief;
+}
+a, button {
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* = commonCSS */
+.animation {
+    position: relative;
+    height: 300px;
+    background: #8B9468; 
+    border-bottom: 1px solid #7b7b7b;
+}
+
+/* = css3动画1 */
+.title {
+    padding-top: 30px;
+    text-align: center;
+}
+.circle {
+    position: relative;
+    top: 40px;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-color: #88757A;
+    border-radius: 50px;
+}
+.be {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    background-color: #C79368;
+    -webkit-transform: rotate(0deg);
+    -webkit-transition: transfrom 3s linear;
+}
+.animation-1 .be:hover {
+    -webkit-transform: rotate(160deg);
+}
+
+/* = css3动画2 */
+.animation-2 .be {
+    -webkit-animation-name:rotate;
+    -webkit-animation-duration:2s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:normal;
+}
+@-webkit-keyframes rotate {
+    from {
+        width: 100px;
+        height: 100px;
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        width: 50px;
+        height: 50px;
+        background-color: #182301;
+        border-radius: 30px;
+    }
+}
+/* = css3动画3 */
+.animation-3 .be {
+    -webkit-animation-name:disappear;
+    -webkit-animation-duration:2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:normal;
+}
+@-webkit-keyframes disappear {
+    from {
+        -webkit-transform:rotate(0);
+    }
+    to {
+        -webkit-transform:rotate(-30deg);
+        left: -300px;
+        opacity: 0;
+    }
+}
+/* = css3动画4 */
+.animation-4 .be {
+    -webkit-animation-name:mixed;
+    -webkit-animation-duration:6s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:normal;
+}
+@-webkit-keyframes mixed {
+    from {
+        right: 0;
+    }
+    50% {
+        right: -300px;
+    }
+    to {
+        right: 0;
+    }
+}
+/* = css3动画5 */
+.animation-5 .be {
+    -webkit-animation-name:chase;
+    -webkit-animation-duration:6s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:normal;
+}
+.animation-5 .circle {
+    position: relative;
+    -webkit-animation-name:run;
+    -webkit-animation-duration:6s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:normal;
+}
+@-webkit-keyframes chase {
+    from {
+        right: 0;
+    }
+    50% {
+        right: -300px;
+    }
+    to {
+        right: 0;
+    }
+}
+@-webkit-keyframes run {
+    from {
+        left: 0;
+    }
+    50% {
+        left: -300px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+/* = css3动画6 */
+.animation-6 .be {
+    width: 60px;
+    height: 60px;
+    -webkit-animation-name:toS;
+    -webkit-animation-duration:3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:normal;
+}
+.animation-6 .circle {
+    position: relative;
+    -webkit-animation-name:toC;
+    -webkit-animation-duration:3s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:normal;
+}
+@-webkit-keyframes toS {
+    0% {
+    }
+    50% {
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+        right: 0;
+    }
+    100% {
+        width: 0;
+        height: 0;
+    }
+}
+@-webkit-keyframes toC {
+    0% {
+    }
+    50% {
+        right: 0;
+        width: 70px;
+        height: 70px;
+        background-color: #912312;
+        border-radius: 20px;
+        -webkit-transform: rotate(360deg);
+    }
+    100% {
+        width: 0;
+        height: 0;
+    }
+}
